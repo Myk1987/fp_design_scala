@@ -1,7 +1,5 @@
 package streams
 
-import common._
-
 /**
  * This component implements a parser to define terrains from a
  * graphical ASCII representation.
@@ -53,7 +51,7 @@ trait StringParserTerrain extends GameDef {
    * by `levelVector`.
    */
   def terrainFunction(levelVector: Vector[Vector[Char]]): Pos => Boolean =
-    (coord: Pos) => levelVector(coord.x)(coord.y) != '-'
+    (p:Pos) => levelVector(p.x)(p.y) != '-'
 
   /**
    * This function should return the position of character `c` in the
